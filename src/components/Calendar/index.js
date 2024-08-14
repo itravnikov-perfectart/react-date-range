@@ -99,9 +99,9 @@ class Calendar extends PureComponent {
   updateShownDate = (props = this.props) => {
     const newProps = props.scroll.enabled
       ? {
-        ...props,
-        months: this.list.getVisibleRange().length,
-      }
+          ...props,
+          months: this.list.getVisibleRange().length,
+        }
       : props;
     const newFocus = calcFocusDate(this.state.focusedDate, newProps);
     this.focusToDate(newFocus, newProps);
@@ -530,7 +530,7 @@ Calendar.defaultProps = {
   showMonthArrow: true,
   showMonthAndYearPickers: true,
   disabledDates: [],
-  disabledDay: () => { },
+  disabledDay: () => {},
   classNames: {},
   locale: defaultLocale,
   ranges: [],
@@ -559,6 +559,8 @@ Calendar.defaultProps = {
   calendarFocus: 'forwards',
   preventSnapRefocus: false,
   ariaLabels: {},
+  showWeekNumbers: false,
+  weeksNumbersLabel: 'W',
 };
 
 Calendar.propTypes = {
@@ -615,6 +617,8 @@ Calendar.propTypes = {
   calendarFocus: PropTypes.string,
   preventSnapRefocus: PropTypes.bool,
   ariaLabels: ariaLabelsShape,
+  showWeekNumbers: PropTypes.bool,
+  weeksNumbersLabel: PropTypes.string,
 };
 
 export default Calendar;

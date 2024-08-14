@@ -50,4 +50,7 @@ export default {
   infiniteMonths: 'rdrInfiniteMonths',
   monthsVertical: 'rdrMonthsVertical',
   monthsHorizontal: 'rdrMonthsHorizontal',
+  monthWrapper: 'rdrMonthWrapper',
+  weekNumbersWrapper: 'rdrWeekNumbersWrapper',
+  weekNumbersLabel: 'rdrWeekNumbersLabel',
 };

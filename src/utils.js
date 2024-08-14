@@ -7,6 +7,7 @@ import {
   differenceInCalendarDays,
   differenceInCalendarMonths,
   addDays,
+  getISOWeek,
 } from 'date-fns';
 
 export function calcFocusDate(currentFocusedDate, props) {
@@ -76,4 +77,15 @@ export function generateStyles(sources) {
       return styles;
     }, {});
   return generatedStyles;
+}
+
+export function getWeeksNumbers(start, end) {
+  const numbers = [];
+  let current = getISOWeek(start);
+  while (start < end) {
+    numbers.push(current);
+    start = addDays(start, 7);
+    current = getISOWeek(start);
+  }
+  return numbers;
 }

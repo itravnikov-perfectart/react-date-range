@@ -21,6 +21,7 @@ const [state, setState] = useState([
   ]);
   
 <DateRange
+  showWeekNumbers
   editableDateInputs={true}
   onChange={item => setState([item.selection])}
   moveRangeOnFirstSelection={false}

@@ -131,6 +131,7 @@ const [state, setState] = useState({
 });
 
 <DateRangePicker
+  showWeekNumbers
   onChange={item => setState({ ...state, ...item })}
   showSelectionPreview={true}
   moveRangeOnFirstSelection={false}
@@ -196,6 +197,7 @@ function customDayContent(day) {
 }
 
 <DateRangePicker
+  showWeekNumbers
   onChange={item => setState({ ...state, ...item })}
   showSelectionPreview={true}
   moveRangeOnFirstSelection={false}
@@ -237,6 +239,7 @@ const [state, setState] = useState({
 });
 
 <DateRangePicker
+  showWeekNumbers
   onChange={item => setState({ ...state, ...item })}
   months={1}
   minDate={addDays(new Date(), -30)}
